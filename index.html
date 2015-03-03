@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hammock.NYC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">
+
+      body {
+      /*
+      font-family: "helvetica neue", arial, sans-serif;
+      font-size: 1.2em;
+      line-height: 1.2em;
+      */
+      color: #222;
+      margin: 20px;
+      }
+
+      @media (min-width: 768px) {
+      section {
+      width: 728px;
+      margin: 0 auto;
+      }
+      }
+
+    </style>
+  </head>
+  <body>
+      <section>
+        <article>
+          <h1>That time I started writing an IRC bouncer in C</h1>
+          <p>Recently, I have been learning about networking programming. I am also interested in programming with C, so natually, I brought the two together. This isn't the first time I have attempted to do this, but this time <a href="https://github.com/jeremyheiler/irc">I mean it</a>.</p>
+          <p>It helps me focus if I have a project to work on, especially one that means something to me. In this case, I am implementing an IRC bouncer. The idea is that I want a persistent connection to an IRC server, but I also want to attach to that persistent connection from any IRC client. I normally just use irssi with a tmux session on a remote server, and that works great except for when I am on my phone. </p>
+          <p>Building the proxy will be straightforward. What will need some thought is how a user will interface with the proxy from the client. It must be possible to manage multiple connections to multiple servers, and be able to differentiate between them. It also must be possible to retrieve history so that the user doesn't miss any messages, especially mentions.</p>
+          <p>One way this can be done is by adding commands that conform to the IRC protocol that only the proxy understands. Another option would be to have a bot that can accept specialized commands. For the messaging backfilling, the bot could reply with correct IRC replies, as if the messages had come in from the IRC server proper.</p>
+          <p>I know softare that does this already exists, but that takes all the fun out of it. My primary goal is to learn C and network programming. I mostly care about IRC as a means to that goal. Iit also helps that I use IRC every day, so I am extra motivated to use what I am building.</p>
+          <time datetime="2015-03-02">2015-03-02</time>
+        </article>
+      </section>
+    <script type="text/javascript">
+      var _gauges = _gauges || [];
+      (function() {
+      var t   = document.createElement('script');
+      t.type  = 'text/javascript';
+      t.async = true;
+      t.id    = 'gauges-tracker';
+      t.setAttribute('data-site-id', '54f1126692c6ac52a300f021');
+      t.src = 'http://secure.gaug.es/track.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+  </body>
+</html>
