@@ -32,6 +32,10 @@
       border-top: 1px solid #ddd;
       }
 
+      .article-conatiner-inner {
+      margin: 20px;
+      }
+
       article {
       margin: 20px auto;
       text-align: justify;
@@ -55,24 +59,28 @@
     <section>
       <header>Jeremy Heiler</header>
       <div class="article-container">
-        <article>
-          <h1>That time I read the Plumtree paper</h1>
-          <p>This morning I finished reading the <a href="http://www.gsd.inesc-id.pt/~jleitao/pdf/srds07-leitao.pdf">Epidemic Broadcast Trees</a> paper for the first time. I was prompted to read the paper by Zeeshan, who linked me to Jordan West's talk about <a href="https://www.youtube.com/watch?v=s4cCUTPU8GI">Riak's gossip protocol</a> from 2013.</p>
-          <p>It's purely anecdotal, but I felt that by watching the video first, it helped me grasp the concepts in the paper. I watched the video again after reading through the paper, and even more of the ideas become clear. It was especially interesting to hear Jordan speak about the practical differences between Plumtree and the Riak implementations.</p>
-          <p>Now that I have a basic idea of what reliable broadcast means, I am very fascinated by the topic. I would love to start prototyping some of the ideas in order to better understand them. At the very least, expect me to write about them as I learn.</p>
-          <time datetime="2015-03-08">2015-03-08</time>
-        </article>
+        <div class="article-container-inner">
+          <article>
+            <h1>That time I read the Plumtree paper</h1>
+            <p>This morning I finished reading the <a href="http://www.gsd.inesc-id.pt/~jleitao/pdf/srds07-leitao.pdf">Epidemic Broadcast Trees</a> paper for the first time. I was prompted to read the paper by Zeeshan, who linked me to Jordan West's talk about <a href="https://www.youtube.com/watch?v=s4cCUTPU8GI">Riak's gossip protocol</a> from 2013.</p>
+            <p>It's purely anecdotal, but I felt that by watching the video first, it helped me grasp the concepts in the paper. I watched the video again after reading through the paper, and even more of the ideas become clear. It was especially interesting to hear Jordan speak about the practical differences between Plumtree and the Riak implementations.</p>
+            <p>Now that I have a basic idea of what reliable broadcast means, I am very fascinated by the topic. I would love to start prototyping some of the ideas in order to better understand them. At the very least, expect me to write about them as I learn.</p>
+            <time datetime="2015-03-08">2015-03-08</time>
+          </article>
+        </div>
       </div>
-      <div class="article-container">
-        <article>
-          <h1>That time I started writing an IRC bouncer in C</h1>
-          <p>Recently, I have been learning about networking programming. I am also interested in programming with C, so natually, I brought the two together. This isn't the first time I have attempted to do this, but this time <a href="https://github.com/jeremyheiler/irc">I mean it</a>.</p>
-          <p>It helps me focus if I have a project to work on, especially one that means something to me. In this case, I am implementing an IRC bouncer. The idea is that I want a persistent connection to an IRC server, but I also want to attach to that persistent connection from any IRC client. I normally just use irssi with a tmux session on a remote server, and that works great except for when I am on my phone. </p>
-          <p>Building the proxy will be straightforward. What will need some thought is how a user will interface with the proxy from the client. It must be possible to manage multiple connections to multiple servers, and be able to differentiate between them. It also must be possible to retrieve history so that the user doesn't miss any messages, especially mentions.</p>
-          <p>One way this can be done is by adding commands that conform to the IRC protocol that only the proxy understands. Another option would be to have a bot that can accept specialized commands. For the messaging backfilling, the bot could reply with correct IRC replies, as if the messages had come in from the IRC server proper.</p>
-          <p>I know softare that does this already exists, but that takes all the fun out of it. My primary goal is to learn C and network programming. I mostly care about IRC as a means to that goal. Iit also helps that I use IRC every day, so I am extra motivated to use what I am building.</p>
-          <time datetime="2015-03-02">2015-03-02</time>
-        </article>
+      <div class="article-container-inner">
+        <div class="article-container">
+          <article>
+            <h1>That time I started writing an IRC bouncer in C</h1>
+            <p>Recently, I have been learning about networking programming. I am also interested in programming with C, so natually, I brought the two together. This isn't the first time I have attempted to do this, but this time <a href="https://github.com/jeremyheiler/irc">I mean it</a>.</p>
+            <p>It helps me focus if I have a project to work on, especially one that means something to me. In this case, I am implementing an IRC bouncer. The idea is that I want a persistent connection to an IRC server, but I also want to attach to that persistent connection from any IRC client. I normally just use irssi with a tmux session on a remote server, and that works great except for when I am on my phone. </p>
+            <p>Building the proxy will be straightforward. What will need some thought is how a user will interface with the proxy from the client. It must be possible to manage multiple connections to multiple servers, and be able to differentiate between them. It also must be possible to retrieve history so that the user doesn't miss any messages, especially mentions.</p>
+            <p>One way this can be done is by adding commands that conform to the IRC protocol that only the proxy understands. Another option would be to have a bot that can accept specialized commands. For the messaging backfilling, the bot could reply with correct IRC replies, as if the messages had come in from the IRC server proper.</p>
+            <p>I know softare that does this already exists, but that takes all the fun out of it. My primary goal is to learn C and network programming. I mostly care about IRC as a means to that goal. Iit also helps that I use IRC every day, so I am extra motivated to use what I am building.</p>
+            <time datetime="2015-03-02">2015-03-02</time>
+          </article>
+        </div>
       </div>
     </section>
     <script type="text/javascript">
