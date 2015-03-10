@@ -24,15 +24,18 @@
       }
 
       header {
-      margin: 20px auto;      
       font-size: 20px;
+      margin: 20px;
+      }
+
+      .header-inner {
       }
 
       .article-container {
       border-top: 1px solid #ddd;
       }
 
-      .article-conatiner-inner {
+      .article-container-inner {
       margin: 20px;
       }
 
@@ -42,22 +45,28 @@
       }
 
       @media (min-width: 768px) {
+
       article, header {
       width: 728px;
       }
-      }
-
-      @media (min-width: 768px) {
+      
       section {
       margin: 0 auto;
       }
+
+      header {
+      margin: 20px auto;
+      }
+      
       }
 
     </style>
   </head>
   <body>
     <section>
-      <header>Jeremy Heiler</header>
+      <header>
+        <div class="header-inner">Jeremy Heiler</div>
+      </header>
       <div class="article-container">
         <div class="article-container-inner">
           <article>
@@ -69,8 +78,8 @@
           </article>
         </div>
       </div>
-      <div class="article-container-inner">
-        <div class="article-container">
+      <div class="article-container">
+        <div class="article-container-inner">
           <article>
             <h1>That time I started writing an IRC bouncer in C</h1>
             <p>Recently, I have been learning about networking programming. I am also interested in programming with C, so natually, I brought the two together. This isn't the first time I have attempted to do this, but this time <a href="https://github.com/jeremyheiler/irc">I mean it</a>.</p>
